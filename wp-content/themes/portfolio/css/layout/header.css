@@ -1,0 +1,102 @@
+/* Style général du header */
+header {
+    background-color: #2c3e50; /* Couleur de fond sombre */
+    padding: 10px 0; /* Espacement interne réduit */
+    display: flex; /* Utilise flexbox pour aligner les éléments */
+    justify-content: space-between; /* Sépare le menu et le bouton connexion */
+    align-items: center; /* Centre les éléments verticalement */
+    color: #ffffff; /* Couleur du texte */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre en bas du header */
+    position: relative; /* Position normale, pas de fixation */
+    width: 100%; /* Assure que le header prend toute la largeur */
+    z-index: 1000; /* Met le header au-dessus du contenu si nécessaire */
+  }
+  
+  /* Retrait de l'espacement pour compenser le sticky header */
+  body {
+    padding-top: 0; /* Plus besoin d'ajuster le padding en haut du body */
+  }
+  
+  /* Style pour la description du site */
+  header h2 {
+    font-size: 1.6em; /* Taille du texte réduite */
+    margin: 0;
+    font-weight: 300; /* Rend le texte plus fin */
+    color: #ecf0f1; /* Couleur plus claire pour la description */
+  }
+  
+  /* Style du menu */
+  .main-navigation .menu {
+    list-style: none; /* Supprime les puces */
+    padding: 0; /* Supprime les marges internes */
+    margin-left: 40px; /* Supprime les marges */
+    display: flex; /* Affiche les éléments en ligne */
+    justify-content: center; /* Centre le menu horizontalement */
+    align-items: center; /* Aligne verticalement les éléments */
+  }
+  
+  /* Style des éléments de menu */
+  .main-navigation .menu li {
+    margin: 0 30px; /* Ajuste l'espacement entre les items du menu */
+  }
+  
+  /* Style des liens de menu */
+  .main-navigation .menu li a {
+    color: #ffffff; /* Couleur des liens */
+    text-decoration: none; /* Supprime le soulignement par défaut */
+    font-size: 1.2em; /* Ajuste la taille du texte */
+    font-weight: 500; /* Rend les liens légèrement plus gras */
+    transition: color 0.3s ease; /* Transition pour effet au survol */
+  }
+  
+  /* Effet au survol des liens */
+  .main-navigation .menu li a:hover {
+    color: #1abc9c; /* Couleur des liens au survol */
+  }
+  
+  /* Style du bouton connexion */
+  .login-logout-btn {
+    margin-left: auto; /* Pousse le bouton vers la droite */
+    display: flex;
+    margin-right: 40px;
+    align-items: center; /* Aligne verticalement avec le menu */
+  }
+  
+  .login-button, 
+  .logout-button {
+    display: inline-block;
+    padding: 10px 20px; /* Ajuste la taille du bouton */
+    background-color: #0073aa; /* Couleur principale */
+    color: #fff;
+    text-decoration: none; /* Enlève le soulignement du lien */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+  }
+  
+  .login-button:hover, 
+  .logout-button:hover {
+    background-color: #005177; /* Couleur plus sombre au survol */
+  }
+  
+  /* Style responsive pour le header */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column; /* Passe les éléments en colonne en mode mobile */
+      align-items: center; /* Centre les éléments */
+      padding: 10px 0;
+    }
+  
+    .main-navigation .menu {
+      flex-direction: column; /* Affiche les éléments du menu en colonne */
+    }
+  
+    .main-navigation .menu li {
+      margin: 10px 0; /* Ajoute de l'espace verticalement entre les items */
+    }
+  
+    .login-logout-btn {
+      margin-right: 0; /* Centre le bouton en mode mobile */
+      margin-top: 10px; /* Ajoute un espacement au-dessus du bouton en mobile */
+    }
+  }
