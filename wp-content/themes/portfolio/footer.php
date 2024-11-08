@@ -1,4 +1,5 @@
 <footer>
+    <?php wp_footer(); ?>
   <div class="footer-menu-section">
     <h3>Menu</h3>
     <nav><?php
