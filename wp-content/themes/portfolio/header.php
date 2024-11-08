@@ -1,17 +1,25 @@
-<body <?php body_class(); ?>>
-      <header>
-        <h2><?php bloginfo('description'); ?></h2>
-        <nav class="main-navigation">
-        <?php
-            if ( has_nav_menu( 'header-menu' ) ) {
-            wp_nav_menu( array(
+<!DOCTYPE html>
+<html <?php language_attributes(); ?>>
+  <head>
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <title><?php the_title(); ?></title>
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css">
+    <?php wp_head(); ?>
+  </head>
+  <body>
+    <header>
+
+
+      <div class="menu-header">
+        <!-- Menu principal -->
+        <nav class="menu_principal">
+            <?php
+            wp_nav_menu(array(
                 'theme_location' => 'header-menu',
-                'container'      => 'ul', 
-                'menu_class'     => 'menu'
-            ) );
-            } else {
-            echo '<p>Le menu de tête n\'est pas défini. Veuillez en ajouter un dans le tableau de bord WordPress.</p>';
-            }
-        ?>
+                'container' => 'ul',
+                'menu_class' => 'nav-menu'
+            ));
+            ?>
         </nav>
-      </header>
+      </div>
+    </header>
